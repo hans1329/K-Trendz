@@ -1,0 +1,34 @@
+{
+  "accountAssociation": {
+    "header": "eyJmaWQiOjE1MjE0MTgsInR5cGUiOiJhdXRoIiwia2V5IjoiMHhmQWNhNjExNkYzMkRCNENiZDkxNkNGMDFjNjZDNTBmOTVkOWM2MGM5In0",
+    "payload": "eyJkb21haW4iOiJrLXRyZW5kei5jb20ifQ",
+    "signature": "agP2EPU6DsOy70TDH55RYlJ+M7pR6WhKUMTX+haDSSN3kCKQiwFdc8/cHQ1yY1aTFeOOPd/OKeVUu8R74yRCvxs="
+  },
+  "miniapp": {
+    "version": "1",
+    "name": "K-Trendz",
+    "homeUrl": "https://k-trendz.com/miniapp",
+    "iconUrl": "https://k-trendz.com/icon-1024.png",
+    "splashImageUrl": "https://k-trendz.com/icon-1024.png",
+    "splashBackgroundColor": "#c13400",
+    "subtitle": "Quiz and Lightstick Shop",
+    "description": "Win USDC in K-Pop Quiz Show and support your favorite artists with digital lightsticks.",
+    "primaryCategory": "social",
+    "screenshotUrls": [
+      "https://k-trendz.com/images/miniapp-hub-og.jpg"
+    ],
+    "heroImageUrl": "https://k-trendz.com/images/miniapp-hub-og.jpg",
+    "tags": [
+      "social",
+      "kpop",
+      "fandom",
+      "fanfi",
+      "lightstick"
+    ],
+    "tagline": "Quiz and Lightstick Shop",
+    "ogTitle": "K-Trendz Quiz and Shop",
+    "ogDescription": "Win USDC in K-Pop Quiz Show and support your favorite artists with digital lightsticks.",
+    "ogImageUrl": "https://k-trendz.com/images/miniapp-hub-og.jpg",
+    "noindex": false
+  }
+}

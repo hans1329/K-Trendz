@@ -1,0 +1,224 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Edge Functions for SSR
+[[edge_functions]]
+  path = "/challenges"
+  function = "ssr-proxy"
+
+[[edge_functions]]
+  path = "/miniapp"
+  function = "ssr-proxy"
+
+[[edge_functions]]
+  path = "/k/*"
+  function = "ssr-proxy"
+
+[[edge_functions]]
+  path = "/w/*"
+  function = "ssr-proxy"
+
+[[edge_functions]]
+  path = "/post/*"
+  function = "ssr-proxy"
+
+[[edge_functions]]
+  path = "/p/*"
+  function = "ssr-proxy"
+
+[[edge_functions]]
+  path = "/winner/*"
+  function = "ssr-proxy"
+
+# Farcaster Frames - proxy via Netlify Edge Function to force HTML headers
+[[edge_functions]]
+  path = "/api/farcaster-challenge-frame"
+  function = "frame-proxy"
+
+[[edge_functions]]
+  path = "/api/farcaster-challenge-frame/*"
+  function = "frame-proxy"
+
+[[edge_functions]]
+  path = "/api/farcaster-pioneer-frame"
+  function = "frame-proxy"
+
+[[edge_functions]]
+  path = "/api/farcaster-pioneer-frame/*"
+  function = "frame-proxy"
+
+# Headers to fix Content-Type for SSR pages
+[[headers]]
+  for = "/post/*"
+  [headers.values]
+    Content-Type = "text/html; charset=utf-8"
+
+[[headers]]
+  for = "/p/*"
+  [headers.values]
+    Content-Type = "text/html; charset=utf-8"
+
+[[headers]]
+  for = "/k/*"
+  [headers.values]
+    Content-Type = "text/html; charset=utf-8"
+
+[[headers]]
+  for = "/w/*"
+  [headers.values]
+    Content-Type = "text/html; charset=utf-8"
+
+[[headers]]
+  for = "/winner/*"
+  [headers.values]
+    Content-Type = "text/html; charset=utf-8"
+
+[[headers]]
+  for = "/fanz/*"
+  [headers.values]
+    Content-Type = "text/html; charset=utf-8"
+
+[[headers]]
+  for = "/challenges"
+  [headers.values]
+    Content-Type = "text/html; charset=utf-8"
+
+# Farcaster Frame endpoints - force HTML Content-Type for Warpcast/clients
+[[headers]]
+  for = "/api/farcaster-challenge-frame"
+  [headers.values]
+    Content-Type = "text/html; charset=utf-8"
+    Cache-Control = "no-store, no-cache, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/api/farcaster-challenge-frame/*"
+  [headers.values]
+    Content-Type = "text/html; charset=utf-8"
+    Cache-Control = "no-store, no-cache, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/api/farcaster-pioneer-frame"
+  [headers.values]
+    Content-Type = "text/html; charset=utf-8"
+    Cache-Control = "no-store, no-cache, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/api/farcaster-pioneer-frame/*"
+  [headers.values]
+    Content-Type = "text/html; charset=utf-8"
+    Cache-Control = "no-store, no-cache, max-age=0, must-revalidate"
+
+# Static file serving and well-known paths
+[[redirects]]
+  from = "/.well-known/*"
+  to = "/.well-known/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/robots.txt"
+  to = "/robots.txt"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/sitemap-posts.xml"
+  to = "https://jguylowswwgjvotdcsfj.supabase.co/functions/v1/sitemap?type=posts"
+  status = 200
+
+[[redirects]]
+  from = "/sitemap-wiki.xml"
+  to = "https://jguylowswwgjvotdcsfj.supabase.co/functions/v1/sitemap?type=wiki"
+  status = 200
+
+[[redirects]]
+  from = "/sitemap-communities.xml"
+  to = "https://jguylowswwgjvotdcsfj.supabase.co/functions/v1/sitemap?type=communities"
+  status = 200
+
+[[redirects]]
+  from = "/sitemap-events.xml"
+  to = "https://jguylowswwgjvotdcsfj.supabase.co/functions/v1/sitemap?type=events"
+  status = 200
+
+[[redirects]]
+  from = "/sitemap-rankings.xml"
+  to = "https://jguylowswwgjvotdcsfj.supabase.co/functions/v1/sitemap?type=rankings"
+  status = 200
+
+[[redirects]]
+  from = "/rss"
+  to = "https://jguylowswwgjvotdcsfj.supabase.co/functions/v1/rss-feed"
+  status = 200
+
+# Quest N participation verification API
+[[redirects]]
+  from = "/api/quest-verify"
+  to = "https://jguylowswwgjvotdcsfj.supabase.co/functions/v1/verify-quest-participation"
+  status = 200
+
+# Bot Trading API - OpenAPI Spec
+[[redirects]]
+  from = "/api/bot/openapi.json"
+  to = "https://jguylowswwgjvotdcsfj.supabase.co/functions/v1/bot-openapi-spec"
+  status = 200
+
+# Bot Trading API - MCP Server
+[[redirects]]
+  from = "/api/bot/mcp"
+  to = "https://jguylowswwgjvotdcsfj.supabase.co/functions/v1/bot-mcp-server"
+  status = 200
+
+# Bot Trading API (OpenClaw Skills)
+[[redirects]]
+  from = "/api/bot/tokens"
+  to = "https://jguylowswwgjvotdcsfj.supabase.co/functions/v1/bot-list-tokens"
+  status = 200
+
+[[redirects]]
+  from = "/api/bot/token-price"
+  to = "https://jguylowswwgjvotdcsfj.supabase.co/functions/v1/bot-get-token-price"
+  status = 200
+
+[[redirects]]
+  from = "/api/bot/buy"
+  to = "https://jguylowswwgjvotdcsfj.supabase.co/functions/v1/bot-buy-token"
+  status = 200
+
+[[redirects]]
+  from = "/api/bot/sell"
+  to = "https://jguylowswwgjvotdcsfj.supabase.co/functions/v1/bot-sell-token"
+  status = 200
+
+# Bot Trading API - Agent Registration (auto API key)
+[[redirects]]
+  from = "/api/bot/register"
+  to = "https://jguylowswwgjvotdcsfj.supabase.co/functions/v1/bot-register-agent"
+  status = 200
+
+# Paymaster V2 API (Agent Registration & Sponsoring)
+[[redirects]]
+  from = "/api/agent/register"
+  to = "https://jguylowswwgjvotdcsfj.supabase.co/functions/v1/agent-register"
+  status = 200
+
+[[redirects]]
+  from = "/api/paymaster/sponsor"
+  to = "https://jguylowswwgjvotdcsfj.supabase.co/functions/v1/paymaster-sponsor"
+  status = 200
+
+# Farcaster Frames
+# NOTE: These endpoints are handled by Netlify Edge Function `frame-proxy` (see [[edge_functions]] above)
+# to guarantee `Content-Type: text/html` and `Cache-Control: no-store` for Warpcast.
+
+# Farcaster Webhook
+[[redirects]]
+  from = "/api/farcaster-webhook"
+  to = "https://jguylowswwgjvotdcsfj.supabase.co/functions/v1/farcaster-webhook"
+  status = 200
+# SPA fallback - all routes go to React app
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

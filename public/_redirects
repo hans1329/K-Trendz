@@ -1,0 +1,49 @@
+# SSR is handled by Netlify Edge Functions (netlify/edge-functions/ssr-proxy.ts)
+# Edge Functions run BEFORE redirects, so /k/*, /w/*, /post/*, /p/* are handled there
+
+# Sitemap redirects
+/sitemap-posts.xml  https://jguylowswwgjvotdcsfj.supabase.co/functions/v1/sitemap?type=posts  200
+/sitemap-wiki.xml  https://jguylowswwgjvotdcsfj.supabase.co/functions/v1/sitemap?type=wiki  200
+/sitemap-communities.xml  https://jguylowswwgjvotdcsfj.supabase.co/functions/v1/sitemap?type=communities  200
+/sitemap-events.xml  https://jguylowswwgjvotdcsfj.supabase.co/functions/v1/sitemap?type=events  200
+/sitemap-rankings.xml  https://jguylowswwgjvotdcsfj.supabase.co/functions/v1/sitemap?type=rankings  200
+
+# RSS feed
+/rss  https://jguylowswwgjvotdcsfj.supabase.co/functions/v1/rss-feed  200
+
+# Token metadata API
+/api/token/*  https://jguylowswwgjvotdcsfj.supabase.co/functions/v1/get-token-metadata/api/token/:splat  200
+/functions/v1/get-token-metadata/api/token/*  https://jguylowswwgjvotdcsfj.supabase.co/functions/v1/get-token-metadata/api/token/:splat  200
+
+# Farcaster Frames
+# NOTE: Handled by Netlify Edge Function `frame-proxy` (netlify/edge-functions/frame-proxy.ts)
+# Keeping redirects here can bypass Edge Functions in some environments and break buttons.
+
+# Quest N participation verification API
+/api/quest-verify  https://jguylowswwgjvotdcsfj.supabase.co/functions/v1/verify-quest-participation  200
+
+# Galxe REST Credential verification API
+/api/galxe-verify  https://jguylowswwgjvotdcsfj.supabase.co/functions/v1/verify-galxe-participation  200
+
+# Bot Trading API - OpenAPI Spec
+/api/bot/openapi.json  https://jguylowswwgjvotdcsfj.supabase.co/functions/v1/bot-openapi-spec  200
+
+# Bot Trading API - MCP Server
+/api/bot/mcp  https://jguylowswwgjvotdcsfj.supabase.co/functions/v1/bot-mcp-server  200
+
+# Bot Trading API (OpenClaw Skills)
+/api/bot/tokens  https://jguylowswwgjvotdcsfj.supabase.co/functions/v1/bot-list-tokens  200
+/api/bot/token-price  https://jguylowswwgjvotdcsfj.supabase.co/functions/v1/bot-get-token-price  200
+/api/bot/buy  https://jguylowswwgjvotdcsfj.supabase.co/functions/v1/bot-buy-token  200
+/api/bot/sell  https://jguylowswwgjvotdcsfj.supabase.co/functions/v1/bot-sell-token  200
+/api/bot/register  https://jguylowswwgjvotdcsfj.supabase.co/functions/v1/bot-register-agent  200
+
+# Paymaster V2 API (Agent Registration & Sponsoring)
+/api/agent/register  https://jguylowswwgjvotdcsfj.supabase.co/functions/v1/agent-register  200
+/api/paymaster/sponsor  https://jguylowswwgjvotdcsfj.supabase.co/functions/v1/paymaster-sponsor  200
+
+# Farcaster Webhook
+/api/farcaster-webhook  https://jguylowswwgjvotdcsfj.supabase.co/functions/v1/farcaster-webhook  200
+
+# SPA fallback - must be last
+/*  /index.html  200

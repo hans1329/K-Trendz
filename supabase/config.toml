@@ -1,0 +1,301 @@
+project_id = "jguylowswwgjvotdcsfj"
+
+[functions.buy-fanztoken-with-balance]
+verify_jwt = false
+
+[functions.farcaster-pioneer-frame]
+verify_jwt = false
+
+[functions.get-ktnz-balance]
+verify_jwt = true
+
+[functions.send-ktnz]
+verify_jwt = true
+
+[functions.extract-url-metadata]
+verify_jwt = false
+
+[functions.translate-to-english]
+verify_jwt = true
+
+[functions.translate-page]
+verify_jwt = false
+
+[functions.generate-news-posts]
+verify_jwt = true
+
+[functions.admin-get-users]
+verify_jwt = true
+
+[functions.admin-update-user-role]
+verify_jwt = true
+
+[functions.render-post]
+verify_jwt = false
+
+[functions.sitemap]
+verify_jwt = false
+
+[functions.render-wiki]
+verify_jwt = false
+
+[functions.suggest-actors]
+verify_jwt = true
+
+[functions.suggest-artists]
+verify_jwt = true
+
+[functions.bulk-create-actors]
+verify_jwt = true
+
+[functions.fetch-missing-images]
+verify_jwt = true
+
+[functions.migrate-actor-birthdays]
+verify_jwt = true
+
+[functions.generate-wiki-content]
+verify_jwt = true
+
+[functions.fetch-social-links]
+verify_jwt = true
+
+[functions.fetch-music-charts]
+verify_jwt = true
+
+[functions.auto-fill-entries]
+verify_jwt = true
+
+[functions.auto-fill-person-details]
+verify_jwt = false
+
+[functions.update-post-rankings]
+verify_jwt = false
+
+[functions.rss-feed]
+verify_jwt = false
+
+[functions.image-proxy]
+verify_jwt = false
+
+[functions.create-checkout]
+verify_jwt = true
+
+[functions.verify-badge-purchase]
+verify_jwt = true
+
+[functions.create-tebex-wallet-link]
+verify_jwt = true
+
+[functions.generate-og-image]
+verify_jwt = false
+
+[functions.create-smart-wallet]
+verify_jwt = true
+
+[functions.issue-fanz-token]
+verify_jwt = true
+
+[functions.sell-fanz-token]
+verify_jwt = true
+
+[functions.create-fanztoken-checkout]
+verify_jwt = true
+
+[functions.webhook-stripe-fanztoken]
+verify_jwt = false
+
+[functions.cleanup-legacy-tokens]
+verify_jwt = true
+
+[functions.get-token-metadata]
+verify_jwt = false
+
+[functions.get-token-info]
+verify_jwt = false
+
+[functions.check-onchain-token]
+verify_jwt = false
+
+[functions.send-welcome-email]
+verify_jwt = true
+
+[functions.recalculate-fanz-fees]
+verify_jwt = false
+
+[functions.check-legacy-contract]
+verify_jwt = true
+
+[functions.burn-fanz-token]
+verify_jwt = true
+
+[functions.create-vesting]
+verify_jwt = false
+
+[functions.select-challenge-winners]
+verify_jwt = true
+
+[functions.admin-upload-brand-asset]
+verify_jwt = true
+
+[functions.record-challenge-onchain]
+verify_jwt = true
+
+[functions.get-youtube-views]
+verify_jwt = false
+
+[functions.fetch-youtube-answer]
+verify_jwt = false
+
+[functions.claim-challenge-prize]
+verify_jwt = true
+
+[functions.claim-prize-onchain]
+verify_jwt = true
+
+[functions.claim-prize-db]
+verify_jwt = true
+
+[functions.withdraw-usdc]
+verify_jwt = true
+
+[functions.create-challenge-onchain]
+verify_jwt = true
+
+[functions.reveal-answer-onchain]
+verify_jwt = true
+
+[functions.select-winners-onchain]
+verify_jwt = true
+
+[functions.distribute-prizes-onchain]
+verify_jwt = true
+
+[functions.distribute-prizes-db]
+verify_jwt = true
+
+[functions.fetch-onchain-transactions]
+verify_jwt = false
+
+[functions.get-backend-smart-account]
+verify_jwt = false
+
+[functions.check-contract-balance]
+verify_jwt = false
+
+[functions.process-expired-claims]
+verify_jwt = false
+
+[functions.set-vote-operator]
+verify_jwt = false
+
+[functions.deploy-backend-smart-account]
+verify_jwt = false
+
+[functions.record-onchain-vote]
+verify_jwt = false
+
+[functions.validate-fund-integrity]
+verify_jwt = true
+
+[functions.record-proposal-vote-onchain]
+verify_jwt = true
+
+[functions.translate-chat-message]
+verify_jwt = true
+
+[functions.backfill-naming-proposals]
+verify_jwt = true
+
+[functions.get-fanztoken-price]
+verify_jwt = false
+
+[functions.admin-transfer-fanz-token]
+verify_jwt = true
+
+[functions.admin-sell-fanz-token]
+verify_jwt = true
+
+[functions.admin-reset-password]
+verify_jwt = true
+
+[functions.generate-winner-card]
+verify_jwt = false
+
+[functions.render-winner-card]
+verify_jwt = false
+
+[functions.participate-challenge]
+verify_jwt = false
+
+[functions.check-fingerprint]
+verify_jwt = false
+
+[functions.verify-quest-participation]
+verify_jwt = false
+
+[functions.distribute-prizes-external]
+verify_jwt = true
+
+[functions.farcaster-challenge-frame]
+verify_jwt = false
+
+[functions.generate-frame-image]
+verify_jwt = true
+
+[functions.link-external-wallet]
+verify_jwt = false
+
+[functions.claim-external-prize]
+verify_jwt = false
+
+[functions.farcaster-participate]
+verify_jwt = false
+
+[functions.lol-coach-chat]
+verify_jwt = false
+
+[functions.record-login-ip]
+verify_jwt = false
+
+[functions.guard-email-signup]
+verify_jwt = false
+
+[functions.bot-get-token-price]
+verify_jwt = false
+
+[functions.bot-buy-token]
+verify_jwt = false
+
+[functions.bot-sell-token]
+verify_jwt = false
+
+[functions.bot-list-tokens]
+verify_jwt = false
+
+[functions.paymaster-sponsor]
+verify_jwt = false
+
+[functions.agent-register]
+verify_jwt = false
+
+[functions.admin-approve-agent]
+verify_jwt = true
+
+[functions.verify-galxe-participation]
+verify_jwt = false
+
+[functions.bot-openapi-spec]
+verify_jwt = false
+
+[functions.bot-mcp-server]
+verify_jwt = false
+
+[functions.bot-register-agent]
+verify_jwt = false
+
+[functions.generate-agent-chat]
+verify_jwt = false
+
+[functions.agent-cron]
+verify_jwt = false
